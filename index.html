@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Omshreeriddhikosh — disciplined trading, investment advisory, wealth management and financial planning.">
+  <meta name="theme-color" content="#071a35">
+  <title>Omshreeriddhikosh | Trading & Financial Solutions</title>
+  <style>
+    :root{
+      --navy:#071a35; --navy2:#0d2a50; --gold:#c89b3c; --gold2:#e5c36a;
+      --ink:#142033; --muted:#64748b; --cream:#fbfaf7; --white:#fff;
+      --line:#e7e2d7; --shadow:0 18px 50px rgba(7,26,53,.10);
+      --radius:22px; --max:1180px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--white);line-height:1.65}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .topbar{background:var(--navy);color:#dce7f4;font-size:13px;padding:8px 0}
+    .topbar .container{display:flex;justify-content:space-between;gap:20px}
+    nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(7,26,53,.08)}
+    .nav-inner{height:82px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--navy)}
+    .brand img{width:62px;height:62px;object-fit:contain}
+    .brand-text{line-height:1.05}
+    .brand-text strong{font-family:Georgia,serif;letter-spacing:.03em;font-size:18px}
+    .brand-text small{display:block;color:var(--gold);font-size:9px;letter-spacing:.25em;margin-top:5px}
+    .navlinks{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:650;color:#334155}
+    .navlinks a:hover{color:var(--gold)}
+    .nav-cta{padding:11px 17px;border-radius:999px;background:var(--navy);color:#fff!important}
+    .hero{position:relative;overflow:hidden;background:
+      radial-gradient(circle at 85% 20%,rgba(200,155,60,.18),transparent 28%),
+      radial-gradient(circle at 10% 80%,rgba(42,93,150,.14),transparent 30%),
+      linear-gradient(135deg,#f9fafb 0%,#fff 52%,#f7f3e9 100%);
+      padding:105px 0 90px}
+    .hero:after{content:"";position:absolute;right:-140px;top:-160px;width:430px;height:430px;border:1px solid rgba(200,155,60,.28);border-radius:50%}
+    .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:70px;align-items:center;position:relative;z-index:1}
+    .eyebrow{display:inline-flex;gap:9px;align-items:center;color:#80601e;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:28px;height:1px;background:var(--gold)}
+    h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(46px,6vw,78px);line-height:1.02;letter-spacing:-.045em;color:var(--navy);margin:18px 0 24px}
+    h1 span{color:var(--gold)}
+    .hero p{font-size:18px;color:#536276;max-width:670px}
+    .hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 21px;border-radius:12px;font-weight:750;font-size:14px;transition:.2s}
+    .btn-primary{background:var(--navy);color:#fff;box-shadow:0 10px 24px rgba(7,26,53,.18)}
+    .btn-primary:hover{transform:translateY(-2px);background:#0d2a50}
+    .btn-secondary{border:1px solid #cfd6df;color:var(--navy);background:#fff}
+    .btn-secondary:hover{border-color:var(--gold);color:#80601e}
+    .hero-card{background:rgba(255,255,255,.82);border:1px solid rgba(200,155,60,.25);border-radius:28px;padding:26px;box-shadow:var(--shadow)}
+    .hero-logo{width:100%;height:300px;object-fit:contain}
+    .trust-strip{padding:25px 0;background:var(--navy);color:#fff}
+    .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .trust-item{display:flex;gap:12px;align-items:center}
+    .trust-icon{width:40px;height:40px;border-radius:12px;background:rgba(229,195,106,.12);color:var(--gold2);display:grid;place-items:center;font-weight:800}
+    .trust-item b{display:block;font-size:14px}.trust-item span{display:block;color:#9fb0c7;font-size:12px}
+    section{padding:100px 0}
+    .section-head{max-width:720px;margin-bottom:48px}
+    .section-head h2{font-family:Georgia,serif;font-size:clamp(34px,4vw,52px);line-height:1.08;color:var(--navy);margin:12px 0 16px}
+    .section-head p{color:var(--muted);font-size:16px}
+    .about{background:var(--cream)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .about-copy p{color:#596779;margin:0 0 18px}
+    .pill-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+    .pill{padding:8px 12px;border:1px solid #ddd4c3;background:#fff;border-radius:999px;font-size:12px;font-weight:700;color:#6a5427}
+    .about-panel{background:#fff;border:1px solid var(--line);border-radius:28px;padding:34px;box-shadow:var(--shadow)}
+    .about-panel h3{font-family:Georgia,serif;font-size:28px;color:var(--navy);margin-bottom:18px}
+    .principle{display:grid;grid-template-columns:38px 1fr;gap:14px;padding:17px 0;border-bottom:1px solid var(--line)}
+    .principle:last-child{border-bottom:0}.principle b{display:block;color:var(--navy)}.principle span{font-size:13px;color:var(--muted)}
+    .num{color:var(--gold);font-weight:850}
+    .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .service{border:1px solid var(--line);border-radius:22px;padding:28px;background:#fff;transition:.25s}
+    .service:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#dbc98e}
+    .service-icon{width:52px;height:52px;border-radius:16px;background:#f7f0dd;color:#896c2b;display:grid;place-items:center;font-size:22px;margin-bottom:23px}
+    .service h3{font-family:Georgia,serif;color:var(--navy);font-size:22px;margin-bottom:10px}
+    .service p{font-size:14px;color:var(--muted)}
+    .directors{background:linear-gradient(180deg,#fff,#f7f8fa)}
+    .director-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .director{display:grid;grid-template-columns:180px 1fr;gap:25px;background:#fff;border:1px solid var(--line);border-radius:26px;padding:24px;box-shadow:0 10px 30px rgba(7,26,53,.06);align-items:center}
+    .director img{width:180px;height:210px;object-fit:cover;object-position:top center;border-radius:18px;background:#f4f4f4}
+    .director h3{font-family:Georgia,serif;font-size:28px;color:var(--navy)}
+    .role{color:var(--gold);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.12em;margin:5px 0 16px}
+    .director p{color:var(--muted);font-size:14px}
+    .credentials{display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}.credential{font-size:11px;border:1px solid #e1e6ec;padding:6px 9px;border-radius:8px;color:#4c5a6b}
+    .process{background:var(--navy);color:#fff}
+    .process .section-head h2{color:#fff}.process .section-head p{color:#aebdd0}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:28px;background:rgba(255,255,255,.035)}
+    .step-no{color:var(--gold2);font-size:13px;font-weight:800}.step h3{font-family:Georgia,serif;font-size:22px;margin:12px 0 8px}.step p{color:#aebdd0;font-size:13px}
+    .cta{padding:80px 0}.cta-box{background:linear-gradient(120deg,#0a2244,#123b68);border-radius:30px;padding:58px;display:flex;align-items:center;justify-content:space-between;gap:35px;color:#fff;overflow:hidden;position:relative}
+    .cta-box:after{content:"";position:absolute;width:300px;height:300px;border:1px solid rgba(229,195,106,.2);border-radius:50%;right:-100px;top:-100px}
+    .cta h2{font-family:Georgia,serif;font-size:clamp(32px,4vw,48px);line-height:1.08;margin-bottom:12px}.cta p{color:#b8c7d9;max-width:680px}
+    footer{background:#041226;color:#9eafc3;padding:48px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr .7fr .9fr;gap:50px;padding-bottom:35px}.footer-brand{color:#fff;font-family:Georgia,serif;font-size:22px;margin-bottom:10px}.footer h4{color:#fff;font-size:13px;margin-bottom:15px}.footer a,.footer p{font-size:13px;display:block;margin:7px 0}.legal{border-top:1px solid rgba(255,255,255,.09);padding-top:18px;font-size:11px;line-height:1.6}
+    .mobile-toggle{display:none;background:none;border:0;font-size:25px;color:var(--navy)}
+    @media(max-width:980px){
+      .navlinks{display:none}.mobile-toggle{display:block}
+      .hero-grid,.about-grid{grid-template-columns:1fr}.hero{padding-top:75px}.hero-card{max-width:600px}
+      .services-grid{grid-template-columns:repeat(2,1fr)}.trust-grid{grid-template-columns:repeat(2,1fr)}
+      .director-grid,.steps{grid-template-columns:1fr}.cta-box{flex-direction:column;align-items:flex-start}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:620px){
+      .container{width:min(var(--max),calc(100% - 28px))}
+      .topbar .container{justify-content:center}.topbar .container span:last-child{display:none}
+      .nav-inner{height:72px}.brand img{width:52px;height:52px}.brand-text strong{font-size:15px}
+      .hero{padding:65px 0}.hero p{font-size:16px}.hero-logo{height:220px}
+      section{padding:72px 0}.services-grid,.trust-grid{grid-template-columns:1fr}
+      .director{grid-template-columns:1fr;text-align:center}.director img{margin:auto}.credentials{justify-content:center}
+      .cta-box{padding:38px 25px}.footer-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>Trust • Discipline • Long-term Prosperity</span><span>Trading & Financial Solutions</span></div></div>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="#home">
+        <img src="assets/Navy%20and%20Gold%20Finance%20Emblem.png" alt="Omshreeriddhikosh logo">
+        <span class="brand-text"><strong>OMSHREERIDDHIKOSH</strong><small>TRADING • FINANCE • WEALTH</small></span>
+      </a>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#services">Services</a><a href="#directors">Leadership</a><a href="#approach">Approach</a><a class="nav-cta" href="#contact">Contact Us</a>
+      </div>
+      <button class="mobile-toggle" onclick="document.querySelector('.navlinks').classList.toggle('show')">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Financial confidence, built with discipline</div>
+          <h1>Build wealth with <span>clarity.</span><br>Grow with purpose.</h1>
+          <p>Omshreeriddhikosh brings together market expertise, disciplined strategy and a client-first mindset to help individuals and businesses make informed financial decisions.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#services">Explore Our Services →</a>
+            <a class="btn btn-secondary" href="#directors">Meet the Directors</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img class="hero-logo" src="assets/Navy%20and%20Gold%20Finance%20Emblem.png" alt="Omshreeriddhikosh emblem">
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item"><div class="trust-icon">01</div><div><b>Client-first</b><span>Solutions built around your goals</span></div></div>
+        <div class="trust-item"><div class="trust-icon">02</div><div><b>Disciplined</b><span>Process-led financial thinking</span></div></div>
+        <div class="trust-item"><div class="trust-icon">03</div><div><b>Transparent</b><span>Clear communication & documentation</span></div></div>
+        <div class="trust-item"><div class="trust-icon">04</div><div><b>Long-term</b><span>Focused on sustainable prosperity</span></div></div>
+      </div>
+    </div>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <div class="eyebrow">About Omshreeriddhikosh</div>
+          <div class="section-head" style="margin-bottom:25px"><h2>A thoughtful approach to modern finance.</h2></div>
+          <p>Omshreeriddhikosh is a trading and finance company dedicated to helping individuals and businesses build, manage and grow their wealth with confidence.</p>
+          <p>Rooted in the values of trust, discipline and long-term prosperity, we combine market understanding with a practical, client-first approach to financial decision-making.</p>
+          <p>Our philosophy is simple: meaningful prosperity is built through informed decisions, disciplined strategy and consistent execution—not through speculation alone.</p>
+          <div class="pill-row"><span class="pill">Market Expertise</span><span class="pill">Risk Awareness</span><span class="pill">Goal-oriented Planning</span><span class="pill">Long-term Thinking</span></div>
+        </div>
+        <div class="about-panel">
+          <h3>What we stand for</h3>
+          <div class="principle"><div class="num">01</div><div><b>Trust</b><span>Build relationships through clarity, integrity and responsible communication.</span></div></div>
+          <div class="principle"><div class="num">02</div><div><b>Discipline</b><span>Follow structured processes instead of emotion-driven decisions.</span></div></div>
+          <div class="principle"><div class="num">03</div><div><b>Prosperity</b><span>Keep the focus on sustainable financial progress and long-term goals.</span></div></div>
+          <div class="principle"><div class="num">04</div><div><b>Responsibility</b><span>Present risks, assumptions and limitations clearly before decisions are made.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Our capabilities</div>
+          <h2>Financial solutions designed around your journey.</h2>
+          <p>Our service framework can be customized to match the exact activities, registrations and permissions of the business before launch.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service"><div class="service-icon">↗</div><h3>Trading Services</h3><p>Structured support around equity, commodity and/or derivatives markets, subject to applicable regulations and the firm's actual offerings.</p></article>
+          <article class="service"><div class="service-icon">◎</div><h3>Investment Advisory</h3><p>Personalized financial guidance intended to help clients evaluate opportunities, objectives, risk and time horizon.</p></article>
+          <article class="service"><div class="service-icon">◈</div><h3>Wealth Management</h3><p>Goal-oriented strategies focused on capital preservation, growth, diversification and long-term financial security.</p></article>
+          <article class="service"><div class="service-icon">▤</div><h3>Financial Planning</h3><p>Structured planning across savings, investments, cash-flow priorities, risk management and future financial goals.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="directors" id="directors">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Leadership</div>
+          <h2>People behind the vision.</h2>
+          <p>A leadership team combining finance education, analytics, business experience and a practical approach to financial decision-making.</p>
+        </div>
+        <div class="director-grid">
+          <article class="director">
+            <img src="assets/chandrabhan-singh.png" alt="Chandrabhan Singh">
+            <div><h3>Chandrabhan Singh</h3><div class="role">Director</div><p>Finance professional with an MBA in Finance and B.Tech background, with professional experience across Microsoft, Info Edge and BYJU'S.</p><div class="credentials"><span class="credential">MBA — Finance</span><span class="credential">B.Tech</span><span class="credential">Analytics & Strategy</span></div></div>
+          </article>
+          <article class="director">
+            <img src="assets/arti-singh.png" alt="Arti Singh">
+            <div><h3>Arti Singh</h3><div class="role">Director</div><p>Finance professional with an MBA in Finance, contributing to the company's focus on structured financial thinking and client-oriented solutions.</p><div class="credentials"><span class="credential">MBA — Finance</span><span class="credential">Financial Planning</span><span class="credential">Client Focus</span></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="approach">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">Our approach</div><h2>From financial goals to disciplined action.</h2><p>Every engagement should begin with understanding the client's objectives and end with clear next steps.</p></div>
+        <div class="steps">
+          <div class="step"><div class="step-no">STEP 01</div><h3>Understand</h3><p>Clarify goals, time horizon, financial context and relevant constraints.</p></div>
+          <div class="step"><div class="step-no">STEP 02</div><h3>Assess</h3><p>Review opportunities, risks, assumptions and the information available.</p></div>
+          <div class="step"><div class="step-no">STEP 03</div><h3>Plan</h3><p>Translate priorities into a structured and understandable financial framework.</p></div>
+          <div class="step"><div class="step-no">STEP 04</div><h3>Execute</h3><p>Implement and review with discipline, documentation and ongoing communication.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta-box">
+          <div><h2>Let's build a more informed financial future.</h2><p>Tell us about your financial goals and the kind of support you are looking for. Contact details and regulatory registration information can be added here before publishing.</p></div>
+          <a class="btn btn-secondary" href="mailto:contact@omshreeriddhikosh.com">Start a Conversation →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><div class="footer-brand">OMSHREERIDDHIKOSH</div><p>Trading • Finance • Wealth</p><p>Trust, discipline and long-term prosperity.</p></div>
+      <div><h4>Navigate</h4><a href="#about">About</a><a href="#services">Services</a><a href="#directors">Leadership</a><a href="#approach">Approach</a></div>
+      <div><h4>Contact</h4><p>Email: contact@omshreeriddhikosh.com</p><p>India</p><p>Replace with official phone/address before launch.</p></div>
+    </div>
+    <div class="container legal">
+      <strong>Important:</strong> This website template contains general information only and does not constitute investment advice, a solicitation to trade, or a guarantee of returns. Trading and investment activities involve risk. Any advisory, broking, portfolio management or other regulated service should be offered only after the applicable registrations, licenses, disclosures and legal wording have been verified. Replace all placeholder contact and regulatory information before publishing.
+      <br><br>© 2026 Omshreeriddhikosh. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
